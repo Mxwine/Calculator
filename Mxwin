@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Calculator</title>
+</head>
+<body>
+<h1>Advanced Calculator</h1>
+<form action="calculator.py">
+<input type="text" name="expression" placeholder="Enter your expression">
+<input type="submit" value="Calculate">
+</form>
+</body>
+</html>import math
+def calculate(expression):
+    try:
+        result = eval(expression)
+    except Exception as e:
+        result = "Error: {}".format(e)
+    return result
+if __name__ == "__main__":
+    expression = input("Enter your expression: ")
+    result = calculate(expression)
+    print(result)
